@@ -1,12 +1,15 @@
 ; (function () {
-    // const people = ["Dian", "Stephen", "Jaime"];
     const numbers = [1, 2, 3];
+    const names = ['Dian', 'Stephen', 'Jaime'];
 
-    let numbersMultiplied = _.map(numbers, function(value, index, items) {
-        items[index] = items[index] * 2;
-        return value * 3;
+    let find = _.find(numbers, function(num) {       
+        return num % 3 == 0;
     });
 
-    console.log(numbers);
-    console.log(numbersMultiplied);
+    let filter = _.filter(numbers, function(num) {       
+        return num % 3 == 0;
+    });
+
+    console.log(`find: ${find}`);   
+    console.log(`filter: ${filter}`);   
 })();
