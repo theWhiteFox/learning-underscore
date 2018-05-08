@@ -1,13 +1,12 @@
 ; (function () {
     // const people = ["Dian", "Stephen", "Jaime"];
-    const dian = {name: "Dian", age: 36, gender: "male"};
+    const numbers = [1, 2, 3];
 
-    _.each(dian, function (name, key) {
-        console.log(`Item: ${name} Key: ${key}`);
-
-        // if (people[key] == "Dian") {
-        //     alert(`Dian: ${key}`);
-        // }
-
+    let numbersMultiplied = _.map(numbers, function(value, index, items) {
+        items[index] = items[index] * 2;
+        return value * 3;
     });
-})()
+
+    console.log(numbers);
+    console.log(numbersMultiplied);
+})();
