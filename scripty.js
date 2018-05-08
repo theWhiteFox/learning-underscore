@@ -1,12 +1,20 @@
 ; (function () {
-    // const people = ["Dian", "Stephen", "Jaime"];
     const numbers = [1, 2, 3];
+    const names = ['Dian', 'Stephen', 'Jaime'];
 
-    let numbersMultiplied = _.map(numbers, function(value, index, items) {
-        items[index] = items[index] * 2;
-        return value * 3;
+    let sumOfNumbers = _.reduce(numbers, function(total, item, index, numbers) {
+        if(index === 1) {
+            console.log(numbers[0]);
+        }
+        console.log(item);
+        return total + item;
     });
 
-    console.log(numbers);
-    console.log(numbersMultiplied);
+    let sumOfNames = _.reduce(names, function(output, item, index, numbers) {
+        return output + " " + item;
+    });
+
+    console.log(`sum: ${sumOfNumbers}`);   
+    console.log(`names: ${sumOfNames}`);   
+
 })();
