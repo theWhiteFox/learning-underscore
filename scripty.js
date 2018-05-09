@@ -1,15 +1,16 @@
-; (function () {
-    const numbers = [1, 2, 3];
-    const names = ['Dian', 'Stephen', 'Jaime'];
+(function() {
+  // const numbers = [1, 2, 3];
+  const people = [
+    { name: "Dian", age: 34 },
+    { name: "Stephen", age: 21 },
+    { name: "Jaime", age: 21 }
+  ];
 
-    let find = _.find(numbers, function(num) {       
-        return num % 3 == 0;
-    });
+  let where = JSON.stringify(_.where(people, { age: 21 })); 
 
-    let filter = _.filter(numbers, function(num) {       
-        return num % 3 == 0;
-    });
+  let findWhere = JSON.stringify(_.findWhere(people, { age: 21 })); 
 
-    console.log(`find: ${find}`);   
-    console.log(`filter: ${filter}`);   
+  console.log(`where: ${where}`);
+  console.log(`findWhere: ${findWhere}`);
+
 })();
