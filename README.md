@@ -28,6 +28,7 @@ Learning underscore.js
 - compact
 - flatten
 - without
+- union
 
 ## Links
 
