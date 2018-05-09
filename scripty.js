@@ -12,7 +12,7 @@
     '<% }); %>'
     ),
     content = personTemplate({
-      person: person
+      people: people
   });
   
   var container = 		document.createElement('ol');
