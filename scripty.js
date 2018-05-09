@@ -1,21 +1,13 @@
 (function() {
-  const numbers = [9, 21, 13, 10];
-  const names = ["Dian", "Stephen", "Jaime", "Sean"];
   const people = [
-    { name: "Dian", age: 41 },
-    { name: "Stephen", age: 21 },
-    { name: "Jaime", age: 21 },
-    { name: "Sean", age: 54 }
+    { name: "Dian", age: 45 },
+    { name: "Stephen", age: 41 },
+    { name: "Jaime", age: 31 },
+    { name: "Sean", age: 74 }
   ];
 
-  let grouped = JSON.stringify(_.groupBy(names, "length"));
+  let indexed = JSON.stringify(_.indexBy(people, "age"));
 
-  let groupNameLength = JSON.stringify(
-    _.groupBy(people, function(person) {
-      return person.age;
-    })
-  );
+  console.log(`Indexed: ${indexed}`);
 
-  console.log(`Group by length: ${grouped}`);
-  console.log(`Group by name length: ${groupNameLength}`);
 })();
