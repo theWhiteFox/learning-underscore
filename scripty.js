@@ -1,12 +1,17 @@
 (function() {
+  const numbers = [1, 2, 3, 10];
   const people = [
-    { name: "Dian", age: 34 },
+    { name: "Dian", age: 41 },
     { name: "Stephen", age: 21 },
     { name: "Jaime", age: 21 }
   ];
 
-  let names = _.pluck(people, 'name');
+  let numMax = _.max(numbers);
 
-  console.log(`names: ${names}`);
+  let ageMax = JSON.stringify(_.max(people, function(person) {
+    return person.age;
+  }));
 
+  console.log(`Max: ${numMax}`);
+  console.log(`Max Age: ${ageMax}`);
 })();
