@@ -30,6 +30,7 @@ Learning underscore.js
 - without
 - union
 - intersection
+- difference
 
 ## Links
 
