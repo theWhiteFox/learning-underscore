@@ -29,6 +29,7 @@ Learning underscore.js
 - flatten
 - without
 - union
+- intersection
 
 ## Links
 
