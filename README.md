@@ -26,6 +26,7 @@ Learning underscore.js
 - last
 - rest
 - compact
+- flatten
 
 ## Links
 
