@@ -6,7 +6,9 @@
     { name: "Sean", age: 74 }
   ];
 
-  const size = JSON.stringify(_.size(people));
+  const part = JSON.stringify(_.partition(people, function(person) {
+      return person.name.length > 5;
+  }));
 
-  console.log(`Size: ${size}`);
+  console.log(`Part: ${part}`);
 })();
