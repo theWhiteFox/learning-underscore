@@ -24,6 +24,8 @@ Learning underscore.js
 - partition
 - initial
 - last
+- rest
+- compact
 
 ## Links
 

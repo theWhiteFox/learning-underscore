@@ -1,12 +1,18 @@
 (function() {
   const people = [
-    { name: "Dian", age: 45 },
-    { name: "Stephen", age: 31 },
-    { name: "Jaime", age: 31 },
-    { name: "Sean", age: 74 }
+    "Dian",
+    "Stephen",
+    "Jaime",
+    undefined,
+    false,
+    null,
+    0,
+    "",
+    "Sean"
   ];
 
-  const last2 = JSON.stringify(_.last(people, 2));
+  // remove falsy values
+  const justNames = JSON.stringify(_.compact(people));
 
-  console.log(`last 2: ${last2}`);
+  console.log(`last 2: ${justNames}`);
 })();
