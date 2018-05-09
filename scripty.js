@@ -6,12 +6,17 @@
     { name: "Jaime", age: 24 }
   ];
 
-  let numMax = _.min(numbers);
+  let numSort = _.sortBy(numbers);
 
-  let ageMax = JSON.stringify(_.min(people, function(person) {
-    return person.age;
-  }));
+  let nameLength = JSON.stringify(
+    _.sortBy(people, function(person) {
+      return person.name.length;
+    })
+  );
 
-  console.log(`Min: ${numMax}`);
-  console.log(`Min Age: ${ageMax}`);
+  let ageMax = JSON.stringify(_.sortBy(people, 'age'));
+
+  console.log(`Sort Numbers: ${numSort}`);
+  console.log(`Sort by name length: ${nameLength}`);
+  console.log(`Sort by max age: ${ageMax}`);
 })();
