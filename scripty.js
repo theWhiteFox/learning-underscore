@@ -1,22 +1,21 @@
 (function() {
   const numbers = [9, 21, 13, 10];
+  const names = ["Dian", "Stephen", "Jaime", "Sean"];
   const people = [
     { name: "Dian", age: 41 },
     { name: "Stephen", age: 21 },
-    { name: "Jaime", age: 24 }
+    { name: "Jaime", age: 21 },
+    { name: "Sean", age: 54 }
   ];
 
-  let numSort = _.sortBy(numbers);
+  let grouped = JSON.stringify(_.groupBy(names, "length"));
 
-  let nameLength = JSON.stringify(
-    _.sortBy(people, function(person) {
-      return person.name.length;
+  let groupNameLength = JSON.stringify(
+    _.groupBy(people, function(person) {
+      return person.age;
     })
   );
 
-  let ageMax = JSON.stringify(_.sortBy(people, 'age'));
-
-  console.log(`Sort Numbers: ${numSort}`);
-  console.log(`Sort by name length: ${nameLength}`);
-  console.log(`Sort by max age: ${ageMax}`);
+  console.log(`Group by length: ${grouped}`);
+  console.log(`Group by name length: ${groupNameLength}`);
 })();
