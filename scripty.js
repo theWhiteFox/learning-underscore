@@ -6,7 +6,7 @@
     { name: "Sean", age: 74 }
   ];
 
-  let sample = JSON.stringify(_.sample(people, 3));
+  const arr = JSON.stringify(_.toArray(people).splice(2));
 
-  console.log(`Sample: ${sample}`);
+  console.log(`arr: ${arr}`);
 })();
