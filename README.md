@@ -22,6 +22,8 @@ Learning underscore.js
 - toArray
 - size
 - partition
+- initial
+- last
 
 ## Links
 

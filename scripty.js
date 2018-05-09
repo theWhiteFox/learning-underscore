@@ -6,7 +6,7 @@
     { name: "Sean", age: 74 }
   ];
 
-  const initial2 = JSON.stringify(_.initial(people, 2));
+  const last2 = JSON.stringify(_.last(people, 2));
 
-  console.log(`initial2: ${initial2}`);
+  console.log(`last 2: ${last2}`);
 })();
