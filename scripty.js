@@ -17,7 +17,6 @@
   
   var container = 		document.createElement('ol');
   container.innerHTML = content;
-  document.body.appendChild(container);
-  
-  console.log(`Remove Duplicates: ${}`);
+  document.body.appendChild(container); 
+ 
 })();
