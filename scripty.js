@@ -1,12 +1,12 @@
 (function() {
-  const numbers = [1, 2, 3];
+  const people = [
+    { name: "Dian", age: 34 },
+    { name: "Stephen", age: 21 },
+    { name: "Jaime", age: 21 }
+  ];
 
-  function multiply(additionalMultiple, anotherOne) {
-      return this * 2 * additionalMultiple * anotherOne;
-  }
+  let names = _.pluck(people, 'name');
 
-  const result = _.invoke(numbers, multiply, 2, 2);  
-
-  console.log(`result: ${result}`);  
+  console.log(`names: ${names}`);
 
 })();
