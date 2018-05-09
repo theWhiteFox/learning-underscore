@@ -8,7 +8,7 @@
   
   let personTemplate = _.template(
     '<% _.each(people, function(person, index, people) { %>' +
-    '<li><%= person %></li>)' +
+    '<li><%= person %></li>' +
     '<% }); %>'
     ),
     content = personTemplate({
