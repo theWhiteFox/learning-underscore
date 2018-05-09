@@ -1,8 +1,12 @@
 (function() {
   const numbers = [1, 2, 3];
 
-  const containsTrue = _.contains(numbers, 4);  
+  function multiply(additionalMultiple, anotherOne) {
+      return this * 2 * additionalMultiple * anotherOne;
+  }
 
-  console.log(`containsTrue: ${containsTrue}`);  
+  const result = _.invoke(numbers, multiply, 2, 2);  
+
+  console.log(`result: ${result}`);  
 
 })();
