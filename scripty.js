@@ -5,10 +5,19 @@
     { name: "John", age: 21 },
     { name: "Jaime", age: 41 }
   ];
-
-  const removeDups = JSON.stringify(_.uniq(people, false, function(person) {
-    return person.age;
-  }));
-
-  console.log(`Remove Duplicates: ${removeDups}`);
+  
+  let personTemplate = _.template(
+    '<% _.each(people, function(person, index, people) { %>' +
+    '<li><%= person %></li>)' +
+    '<% }); %>'
+    ),
+    content = personTemplate({
+      person: person
+  });
+  
+  var container = 		document.createElement('ol');
+  container.innerHTML = content;
+  document.body.appendChild(container);
+  
+  console.log(`Remove Duplicates: ${}`);
 })();
