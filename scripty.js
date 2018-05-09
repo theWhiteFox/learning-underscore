@@ -6,7 +6,7 @@
     { name: "Sean", age: 74 }
   ];
 
-  let shuffle = JSON.stringify(_.shuffle(people, "age"));
+  let sample = JSON.stringify(_.sample(people, 3));
 
-  console.log(`Count: ${shuffle}`);
+  console.log(`Sample: ${sample}`);
 })();
