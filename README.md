@@ -27,6 +27,7 @@ Learning underscore.js
 - rest
 - compact
 - flatten
+- without
 
 ## Links
 

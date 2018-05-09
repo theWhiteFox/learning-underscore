@@ -1,20 +1,7 @@
 (function() {
-  const people = [
-    "Dian",
-    "Stephen",
-    "Jaime",
-    [
-    undefined,
-    false,
-    null,
-    0],
-    ["",
-    [["Sean"]]     
-    ]
-  ];
+  const numbers = [1, 2, 3, 4, 5];
 
-  // remove falsy values
-  const justNames = JSON.stringify(_.flatten(people));
+  const exclude = _.without(numbers, 2, 3);
 
-  console.log(`last 2: ${justNames}`);
+  console.log(`Exclude: ${exclude}`);
 })();
