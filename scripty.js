@@ -6,9 +6,7 @@
     { name: "Sean", age: 74 }
   ];
 
-  const part = JSON.stringify(_.partition(people, function(person) {
-      return person.name.length > 5;
-  }));
+  const first = JSON.stringify(_.first(people, 2));
 
-  console.log(`Part: ${part}`);
+  console.log(`first: ${first}`);
 })();
