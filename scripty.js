@@ -1,22 +1,16 @@
 (function() {
-  const people = [
-    { name: "Dian", age: 34 },
-    { name: "Stephen", age: 21 },
-    { name: "John", age: 21 },
-    { name: "Jaime", age: 41 }
-  ];
-  
-  let personTemplate = _.template(
-    '<% _.each(people, function(person, index, people) { %>' +
-    '<li><%= person %></li>' +
-    '<% }); %>'
+  var artists = ['Led Zeppelin', 'ACDC', 'Rolling Stones'],
+    artistTemplate = _.template(
+      '<% _.each(artists, function(artist, index, artists) { %>' +
+        '<li><%= artist %></li>' +
+      '<% }); %>'
     ),
-    content = personTemplate({
-      people: people
-  });
-  
-  var container = 		document.createElement('ol');
-  container.innerHTML = content;
-  document.body.appendChild(container); 
+    content = artistTemplate({
+      artists: artists
+    });
+
+var container = document.createElement('ol');
+container.innerHTML = content;
+document.body.appendChild(container);
  
 })();
