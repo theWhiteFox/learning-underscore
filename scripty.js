@@ -1,16 +1,10 @@
 (function() {
-  // const numbers = [1, 2, 3];
-  const people = [
-    { name: "Dian", age: 34 },
-    { name: "Stephen", age: 21 },
-    { name: "Jaime", age: 21 }
-  ];
+  const numbers = [1, 2, 3, 4, 5, 6];
 
-  let where = JSON.stringify(_.where(people, { age: 21 })); 
-
-  let findWhere = JSON.stringify(_.findWhere(people, { age: 21 })); 
-
-  console.log(`where: ${where}`);
-  console.log(`findWhere: ${findWhere}`);
+  const oodNumbers = _.reject(numbers, function(number) {
+    return number % 2 === 0;
+  });  
+  
+  console.log(`oodNumbers: ${oodNumbers}`);  
 
 })();
