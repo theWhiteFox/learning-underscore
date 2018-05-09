@@ -31,6 +31,7 @@ Learning underscore.js
 - union
 - intersection
 - difference
+- uniq
 
 ## Links
 

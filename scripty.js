@@ -1,8 +1,14 @@
 (function() {
-  const numbers = [2, 3, 5];
-  const numbers2 = [1, 2, 4, 5];
+  const people = [
+    { name: "Dian", age: 34 },
+    { name: "Stephen", age: 21 },
+    { name: "John", age: 21 },
+    { name: "Jaime", age: 41 }
+  ];
 
-  const arrTwo = _.difference(numbers, numbers2);
+  const removeDups = JSON.stringify(_.uniq(people, false, function(person) {
+    return person.age;
+  }));
 
-  console.log(`Difference: ${arrTwo}`);
+  console.log(`Remove Duplicates: ${removeDups}`);
 })();
