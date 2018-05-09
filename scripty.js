@@ -6,7 +6,7 @@
     { name: "Sean", age: 74 }
   ];
 
-  const arr = JSON.stringify(_.toArray(people).splice(2));
+  const size = JSON.stringify(_.size(people));
 
-  console.log(`arr: ${arr}`);
+  console.log(`Size: ${size}`);
 })();
